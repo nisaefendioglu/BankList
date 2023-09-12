@@ -5,7 +5,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("androidx.navigation.safeargs.kotlin")
     id ("kotlin-parcelize")
-
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -81,6 +81,10 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.4.2")
     kapt ("androidx.room:room-compiler:2.4.2")
     implementation ("androidx.room:room-ktx:2.4.2")
+
+    // Firebase Analytics
+    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
 
 

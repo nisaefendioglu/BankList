@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.nisaefendioglu.banklist.R
 import com.nisaefendioglu.banklist.databinding.FragmentDetailBinding
+import com.nisaefendioglu.banklist.utils.FirebaseAnalyticsUtils
 import com.nisaefendioglu.banklist.utils.openMap
 import com.nisaefendioglu.banklist.utils.setTextViewText
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,10 +29,12 @@ class DetailFragment : Fragment() {
         val infoNotAvailable = getString(R.string.no_information)
 
         with(binding) {
-            setTextViewText(tvBankCity, bankItem?.dc_SEHIR, infoNotAvailable)
-            setTextViewText(tvBankBranch, bankItem?.dc_BANKA_SUBE, infoNotAvailable)
-            setTextViewText(tvBankCode, bankItem?.dc_BANK_KODU, infoNotAvailable)
-            setTextViewText(tvBankAdress, bankItem?.dc_ADRES, infoNotAvailable)
+            setTextViewText(tvBankCity, bankItem.dc_SEHIR, infoNotAvailable)
+            setTextViewText(tvBankBranch, bankItem.dc_BANKA_SUBE, infoNotAvailable)
+            setTextViewText(tvBankCode, bankItem.dc_BANK_KODU, infoNotAvailable)
+            setTextViewText(tvBankAdress, bankItem.dc_ADRES, infoNotAvailable)
+
+            FirebaseAnalyticsUtils.logBankInformation(bankItem)
 
             btnDirection.setOnClickListener {
                 context?.openMap(bankItem?.dc_ADRES)
