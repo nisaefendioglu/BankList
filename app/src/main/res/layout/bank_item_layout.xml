@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bankItem"
+            type="com.nisaefendioglu.banklist.model.Bank" />
+    </data>
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_xsmall"
+    app:cardCornerRadius="@dimen/cv_radius"
+    app:strokeColor="@color/blue">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_xsmall">
+
+    <TextView
+            android:id="@+id/tvBankCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{bankItem.dc_SEHIR}"
+            tools:text="@string/city" />
+
+        <TextView
+            android:id="@+id/tvBankBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBankCity"
+            tools:text="@string/bank_branch_mock"
+            android:text="@{bankItem.dc_BANKA_SUBE}"/>
+
+        <TextView
+            android:id="@+id/tvBankCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBankBranch"
+            tools:text="@string/bank_code"
+            android:text="@{bankItem.dc_BANK_KODU}"/>
+
+        <TextView
+            android:id="@+id/tvBankAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBankCode"
+            tools:text="@string/bank_adress_mock"
+            android:text="@{bankItem.dc_ADRES}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+</layout>

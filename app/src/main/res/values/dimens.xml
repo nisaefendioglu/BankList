@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_size">11sp</dimen>
+    <dimen name="medium_size">14sp</dimen>
+    <dimen name="search_elevation">40dp</dimen>
+
+    <dimen name="margin_xsmall">8dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_small_large">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+
+    <dimen name="cv_radius">20dp</dimen>
+    <dimen name="card_elevation">20dp</dimen>
+</resources>
