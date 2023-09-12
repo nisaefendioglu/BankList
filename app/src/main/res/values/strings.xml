@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BankList</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="city">Istanbul</string>
+    <string name="bank_code">S1A01590</string>
+    <string name="search">Search</string>
+    <string name="directions">Get Directions 🗺️</string>
+    <string name="no_information">No Information 🚫</string>
+    <string name="bank_branch_mock">CEYHAN ŞUBESİ/ADANA</string>
+    <string name="bank_adress_mock">Türlübaş Mah.Atatürk Cad.No:272 Ceyhan/ADANA 01960</string>
+    <string name="no_network">No Network</string>
 </resources>
