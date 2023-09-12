@@ -11,8 +11,8 @@ fun text(textView: TextView, value: String?) {
     textView.text = value.takeIf { !it.isNullOrEmpty() } ?: "No Information \uD83D\uDEAB"
 }
 
-fun setTextViewText(textView: TextView, value: String?, infoNotAvailable: String) {
-    textView.text = value.takeIf { !it.isNullOrEmpty() } ?: infoNotAvailable
+fun setTextViewText(value: String?, infoNotAvailable: String): String {
+    return value.takeIf { !it.isNullOrEmpty() } ?: infoNotAvailable
 }
 
 fun showToast(context: Context, message: String) {

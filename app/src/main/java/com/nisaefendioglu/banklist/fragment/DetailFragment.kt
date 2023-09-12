@@ -29,15 +29,15 @@ class DetailFragment : Fragment() {
         val infoNotAvailable = getString(R.string.no_information)
 
         with(binding) {
-            setTextViewText(tvBankCity, bankItem.dc_SEHIR, infoNotAvailable)
-            setTextViewText(tvBankBranch, bankItem.dc_BANKA_SUBE, infoNotAvailable)
-            setTextViewText(tvBankCode, bankItem.dc_BANK_KODU, infoNotAvailable)
-            setTextViewText(tvBankAdress, bankItem.dc_ADRES, infoNotAvailable)
+            tvBankCity.text = setTextViewText(bankItem.dc_SEHIR, infoNotAvailable)
+            tvBankBranch.text = setTextViewText(bankItem.dc_BANKA_SUBE, infoNotAvailable)
+            tvBankCode.text = setTextViewText(bankItem.dc_BANK_KODU, infoNotAvailable)
+            tvBankAdress.text = setTextViewText(bankItem.dc_ADRES, infoNotAvailable)
 
             FirebaseAnalyticsUtils.logBankInformation(bankItem)
 
             btnDirection.setOnClickListener {
-                context?.openMap(bankItem?.dc_ADRES)
+                context?.openMap(bankItem.dc_ADRES)
             }
         }
 
